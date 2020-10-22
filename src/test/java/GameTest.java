@@ -11,4 +11,13 @@ public class GameTest
         gameController.start();
         assertEquals("playState", gameController.getCurrentGame().getState());
     }
+
+    @Test
+    public void FR02Test()
+    {
+        Controller gameController = new Controller();
+        gameController.start();
+        gameController.pause();
+        assertEquals("pauseState", gameController.getCurrentGame().getState());
+    }
 }
