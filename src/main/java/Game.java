@@ -28,6 +28,11 @@ public class Game
         this.mistakes = mistakes;
     }
 
+    public void addMistake()
+    {
+        mistakes++;
+    }
+
     public double getTime()
     {
         return time;

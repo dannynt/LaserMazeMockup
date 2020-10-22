@@ -9,13 +9,22 @@ public class SensorHandler
 
     public SensorHandler(Controller controller)
     {
+        this.controller = controller;
+        sensors = new ArrayList<Sensor>();
     }
 
     public void addSensor(Sensor sensor)
     {
+        sensor.setSensorHandler(this);
+        sensors.add(sensor);
     }
 
     public void removeSensor(Sensor sensor)
     {
+    }
+
+    public Controller getController()
+    {
+        return controller;
     }
 }

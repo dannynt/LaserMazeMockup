@@ -20,5 +20,4 @@ public class SensorTest
         sensor2.interrupt();
         Assert.assertEquals(controller.getMistakes(), 1);
     }
-
 }

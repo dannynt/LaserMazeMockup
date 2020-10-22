@@ -10,11 +10,17 @@ public class Sensor
 
     public void interrupt()
     {
+        if(sh != null)sh.getController().makeMistake();
     }
 
 
     public int getId()
     {
         return id;
+    }
+
+    public void setSensorHandler(SensorHandler sh)
+    {
+        this.sh = sh;
     }
 }

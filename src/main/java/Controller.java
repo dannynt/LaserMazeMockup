@@ -26,7 +26,9 @@ public class Controller
         currentGame.switchState(new PauseState());
     }
 
-    public void makeMistake() {}
+    public void makeMistake() {
+        currentGame.addMistake();
+    }
 
     public int getMistakes()
     {
