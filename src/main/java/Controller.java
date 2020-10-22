@@ -1,3 +1,5 @@
+import jdk.jshell.spi.ExecutionControl;
+
 public class Controller
 {
     private Game currentGame;
@@ -6,7 +8,7 @@ public class Controller
     public void stop() {}
     public void pause() {}
     public void makeMistake() {}
-    public void getMistakes() {}
+    public int getMistakes() { throw new RuntimeException("Not implemented"); }
 
     public Game getCurrentGame()
     {
