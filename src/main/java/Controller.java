@@ -10,7 +10,13 @@ public class Controller
         currentGame.switchState(new PlayState());
     }
 
-    public void stop() {}
+    public void stop()
+    {
+        if (currentGame == null) throw new RuntimeException("Game not initialized");
+        if (!currentGame.getState().equals("playState")) throw new RuntimeException("Game not in play state");
+
+        currentGame.switchState(new StoppedState(currentGame));
+    }
 
     public void pause()
     {
@@ -21,7 +27,11 @@ public class Controller
     }
 
     public void makeMistake() {}
-    public int getMistakes() { throw new RuntimeException("Not implemented"); }
+
+    public int getMistakes()
+    {
+        return currentGame.getMistakes();
+    }
 
     public Game getCurrentGame()
     {

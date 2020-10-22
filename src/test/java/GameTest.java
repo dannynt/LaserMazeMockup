@@ -27,7 +27,7 @@ public class GameTest
         Controller gameController = new Controller();
         gameController.start();
         gameController.stop();
-        assertEquals(null, gameController.getCurrentGame());
+        assertEquals("StoppedState", gameController.getCurrentGame().getState());
         assertEquals(0, gameController.getMistakes());
 
     }
