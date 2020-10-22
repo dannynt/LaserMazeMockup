@@ -4,11 +4,13 @@ public class Game
     private int mistakes;
     private double time;
 
-    public Game() {}
-
-    public GameState getState()
+    public Game()
     {
-        return state;
+    }
+
+    public String getState()
+    {
+        return state.getState();
     }
 
     public void setState(GameState state)
@@ -34,5 +36,10 @@ public class Game
     public void setTime(double time)
     {
         this.time = time;
+    }
+
+    public void switchState(GameState newState)
+    {
+        this.state = newState;
     }
 }
