@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SensorHandler
@@ -6,15 +7,15 @@ public class SensorHandler
     private Controller controller;
     private List<Sensor> sensors;
 
-    public SensorHandler()
+    public SensorHandler(Controller controller)
     {
     }
 
-    public void AddSensor()
+    public void addSensor(Sensor sensor)
     {
     }
 
-    public void RemoveSensor()
+    public void removeSensor(Sensor sensor)
     {
     }
 }
